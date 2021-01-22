@@ -5,8 +5,118 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Информация</a></li>  <!-- Михаил, я подумал, что в верстке будет некрасиво, если я буду капсом писать надписи, как того предполагает макет. Можно будет же в CSS сделать увеличение регистра, верно?-->
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="catalog.html">Гостиницы</a></li>
+        </ul>
+        <a href="index.html">
+          <img src="https://via.placeholder.com" width="138" height="70" alt="Логотип города Седона">
+        </a>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Описание города Седона</h1>
+      <p>Седона — небольшой городок в Аризоне,<br>
+        заслуживающий большего!</p>
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <img src="https://via.placeholder.com" width="1200" height="509" alt="Приветственные слова на фоне Гранд Каньона">
+      <section>
+        <ol>
+          <li>
+            <h2>Настоящий<br>
+              городок</h2>
+            <p>Седона - не аттракцион для туристов, там<br>
+                течёт своя жизнь</p>
+            <img src="https://via.placeholder.com" width="800" height="256" alt="Вид на горы со стороны городка Седона">
+            <ul>
+              <li>
+                <h3>Жильё</h3>
+                <p>Рекомендуем пожить в настоящем<br>
+                   мотеле, всё как в кино!</p>
+              </li>
+              <li>
+                <h3>Еда</h3>
+                <p>Всегда заказывайте фирменный бургер,<br>
+                   вы не разочаруетесь!</p>
+              </li>
+              <li>
+                <h3>Сувениры</h3>
+                <p>Не только китайского, но и местного<br>
+                  производства!</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2>Там есть<br>
+                мост дьявола</h2>
+            <p>Да, по нему можно пройти! Если конечно<br>
+              вы осмелитесь</p>
+            <img src="https://via.placeholder.com" width="800" height="256" alt="Вид на Мост Дьявола">
+          </li>
+          <li>
+            <h2>Небольшая<br>
+              площадь</h2>
+            <p>Все достопримечательности<br>
+              находятся очень близко</p>
+          </li>
+          <li>
+            <h2>Красивая<br>
+              дорога</h2>
+            <p>Ехать в седону из лас-вегаса совсем<br>
+              не скучно!</p>
+          </li>
+          <li>
+            <h2>Мало<br>
+              туристов</h2>
+            <p>Большинство едет в гранд каньон<br>
+              и толпится там</p>
+          </li>
+        </ol>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+        <p>Заинтересовались?</p>
+        <p>Укажите предполагаемые даты поездки,<br>
+           и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <h3>Поиск гостиницы в седоне</h3>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <p>
+            <label for="date-from-field">Дата заезда:</label>
+            <input type="date" name="date-from" id="date-from-field" value="2017-05-24"> <!-- Пока не понял как сделать так, чтобы месяц отображался словом-->
+          </p>
+          <p>
+            <label for="date-to-field">Дата выезда:</label>
+            <input type="date" name="date-to" id="date-to-field" value="2017-07-04">
+          </p>
+          <label for="adults-field">Взрослые:</label>
+          <input type="number" name="adults" id="adults-field" value="2" min="0" max="4" step="1">
+          <label for="children-field">Дети:</label>
+          <input type="number" name="children" id="children-field" value="0" min="0" max="4" step="1">
+        </form>
+        <button type="submit">Найти</button>
+        <img src="https://via.placeholder.com" width="1199" height="594" alt="Карта Седоны">
+      </section>
+    </main>
+    <footer> <!-- Михаил, подвал сайта показался мне не требующим оборачивания в section (прав ли я?). Также, судя по макету, телефон не является ссылкой, поэтому я его не оборачивал.-->
+      <p>#VISITSEDONA</p>
+      <p>ТЕЛ: +7(495) 666-01-66</p>
+      <ul>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="#">Facebook</a>
+        </li>
+        <li>
+          <a href="#">Youtube</a>
+        </li>
+      </ul>
+      <p>Website by</p>
+      <img src="https://via.placeholder.com" width="115" height="41" alt="Логотип htmlacademy">
+    </footer>
   </body>
 </html>
