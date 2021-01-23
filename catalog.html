@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+    	<meta charset="utf-8">
+    	<title>HTML Academy:Каталог-Седона</title>
+  	</head>
+  	<body>
+    	<header>
+      		<nav>
+        		<ul>
+          			<li><a href="#">Информация</a></li>  
+          			<li><a href="#">Фото и видео</a></li>
+          			<li><a href="#">Карта штата</a></li>
+          			<li><a href="catalog.html">Гостиницы</a></li>
+        		</ul>
+        		<a href="index.html">
+          		<img src="https://via.placeholder.com" width="138" height="70" alt="Логотип города Седона">
+        		</a>
+      		</nav>
+		</header>
+		<main>
+			<h1>Страница выбора и бронирования номера в гостинице</h1>
+	  		<section> <!--Михаил, фоновое изображения я буду добавлять в CSS, верно? Т.е. мне тут не нужно приклреплять <img>?-->
+				<h2>Фильтр гостиниц</h2>
+				<form action="https://echo.htmlacademy.ru" method="GET">
+					<fieldset>
+						<legend>Инфраструктура:</legend>
+						<input type="checkbox" name="pool" id="pool-field" checked>
+						<label for="pool-field">Бассейн</label>
+						<input type="checkbox" name="parking" id="parking-field">
+						<label for="parking-field">Парковка</label>
+						<input type="checkbox" name="wi-fi" id="wi-fi-field">
+						<label for="wi-fi-field">Wi-Fi</label>
+					</fieldset>
+					<fieldset>
+						<legend>Тип жилья:</legend>
+						<input type="checkbox" name="hotel" id="hotel-field" checked>
+						<label for="hotel-field">Гостиница</label>
+						<input type="checkbox" name="motel" id="motel-field" checked>
+						<label for="motel-field">Мотель</label>
+						<input type="checkbox" name="appartments" id="appartments-field" checked>
+						<label for="appartments-field">Апартаменты</label>
+					</fieldset>
+					<fieldset>
+						<legend>Стоимость в сутки (Р):</legend>
+						<label for="price-from-field">От</label>
+						<input type="text" name="price-from" id="price-from-field" value="0">
+						<label for="price-to-field">До</label>
+						<input type="text" name="price-to" id="price-to-field" value="3000">
+						<input type="range" min="0" max="4000" step="100" value="3000">
+					</fieldset>
+					<button type="submit">Показать</button>
+				</form>
+			</section>
+			<section> <!-- Михаил, я в этой секции особенно сомневаюсь. 1) Это правильность оформления кнопок вверх/вниз. 2) В элементах списка волнует оформление звезд.-->
+				<h2>Список гостиниц</h2>	
+				<p>Найдено: 3</p>
+				<p>Сортировка:</p>
+				<ul>
+					<li><a>По цене</a></li>
+					<li><a href="#">По типу</a></li>
+					<li><a href="#">По рейтингу</a></li>
+				</ul>
+				<button type="button" disabled>Вверх</button>
+				<button type="button">Вниз</button>
+				<ul>
+					<li>
+						<h3>Amara Resort & Spa</h3>
+						<img src="https://via.placeholder.com" width="135" height="90" alt="Вид на гостиницу Amara Resort & Spa">
+						<p>Гостиница</p>
+						<p>От 4000 Р.</p>
+						<span>4 звезды</span> 
+						<p>Рейтинг: 8,5</p>
+						<a href="#">Подробнее</a>
+						<button type="submit">Забронировать</button>
+					</li>
+					<li>
+						<h3>Desert Quail Inn</h3>
+						<img src="https://via.placeholder.com" width="135" height="90" alt="Вид на мотель Desert Quail Inn">
+						<p>Мотель</p>
+						<p>От 3000 Р.</p>
+						<span>3 звезды</span> 
+						<p>Рейтинг: 8,9</p>
+						<a href="#">Подробнее</a>
+						<button type="submit">Забронировать</button>
+					</li>
+					<li>
+						<h3>Villas at Poco Diablo</h3>
+						<img src="https://via.placeholder.com" width="135" height="90" alt="Вид на апартаменты Villas at Poco Diablo">
+						<p>Апартаменты</p>
+						<p>От 2000 Р.</p>
+						<span>2 звезды</span> 
+						<p>Рейтинг: 9,2</p>
+						<a href="#">Подробнее</a>
+						<button type="submit">Забронировать</button>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<footer> 
+			<div>
+				<p>#VISITSEDONA</p>
+				<p>
+					<a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+				</p>
+			</div>
+			<div>
+				<ul>
+					<li>
+						<a href="#">Twitter</a>
+					</li>
+					<li>
+						<a href="#">Facebook</a>
+					</li>
+					<li>
+						<a href="#">Youtube</a>
+					</li>
+			  	</ul>
+			</div>
+			<div>
+			  	<p>Website by</p>
+			  	<img src="https://via.placeholder.com" width="115" height="41" alt="Логотип htmlacademy">
+			</div>
+		</footer>
+	</body>
+</html>
