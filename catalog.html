@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--Михаил, добавил все изображения в проект и оптимизировал их. В index.html не стал добавлять фоновое изображение пока согласно заданию. Вопрос по поводу обрезки, которая идет ниже фонового изображения в index.html в самом начале. Мне нужно добавлять его из макета в svg-формате, или же это нужно в CSS потом добавлять?-->
 <html lang="ru">
 	<head>
     	<meta charset="utf-8">
@@ -14,13 +14,13 @@
           			<li><a href="catalog.html">Гостиницы</a></li>
         		</ul>
         		<a href="index.html">
-          		<img src="https://via.placeholder.com" width="138" height="70" alt="Логотип города Седона">
+          		<img src="img/logo.svg" width="138" height="70" alt="Логотип города Седона">
         		</a>
       		</nav>
 		</header>
 		<main>
 			<h1>Страница выбора и бронирования номера в гостинице</h1>
-	  		<section> <!--Михаил, фоновое изображения я буду добавлять в CSS, верно? Т.е. мне тут не нужно приклреплять <img>?-->
+	  		<section> 
 				<h2>Фильтр гостиниц</h2>
 				<form action="https://echo.htmlacademy.ru" method="GET">
 					<fieldset>
@@ -52,7 +52,7 @@
 					<button type="submit">Показать</button>
 				</form>
 			</section>
-			<section> <!-- Михаил, я в этой секции особенно сомневаюсь. 1) Это правильность оформления кнопок вверх/вниз. 2) В элементах списка волнует оформление звезд.-->
+			<section> 
 				<h2>Список гостиниц</h2>	
 				<p>Найдено: 3</p>
 				<p>Сортировка:</p>
@@ -67,7 +67,7 @@
 					<li>
 						<article>
 							<h3>Amara Resort & Spa</h3>
-							<img src="https://via.placeholder.com" width="135" height="90" alt="Вид на гостиницу Amara Resort & Spa">
+							<img src="img/AMARA_RESORT.jpg" width="135" height="90" alt="Вид на гостиницу Amara Resort & Spa">
 							<p>Гостиница</p>
 							<p>От 4000 Р.</p>
 							<img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
@@ -82,7 +82,7 @@
 					<li>
 						<article>
 							<h3>Desert Quail Inn</h3>
-							<img src="https://via.placeholder.com" width="135" height="90" alt="Вид на мотель Desert Quail Inn">
+							<img src="img/DESERT_QUAIL_INN.jpg" width="135" height="90" alt="Вид на мотель Desert Quail Inn">
 							<p>Мотель</p>
 							<p>От 3000 Р.</p>
 							<img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
@@ -96,7 +96,7 @@
 					<li>
 						<article>
 							<h3>Villas at Poco Diablo</h3>
-							<img src="https://via.placeholder.com" width="135" height="90" alt="Вид на апартаменты Villas at Poco Diablo">
+							<img src="img/VILLAS_AT_POCO_DIABLO.jpg" width="135" height="90" alt="Вид на апартаменты Villas at Poco Diablo">
 							<p>Апартаменты</p>
 							<p>От 2000 Р.</p>
 							<img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
@@ -132,7 +132,7 @@
 			<div>
 				<p>Website by</p>
 				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="https://via.placeholder.com" width="115" height="41" alt="Логотип htmlacademy">
+					<img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип htmlacademy">
 				</a>
 			</div>
 		</footer>
