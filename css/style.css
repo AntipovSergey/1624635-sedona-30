@@ -1,0 +1,50 @@
+/*Fonts*/
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans.woff2") format("woff2"),
+    url("../fonts/PTSans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*Variables*/
+
+:root {
+  --basic-white: #FFFFFF;
+  --basic-dark-white: #EEEEEE;
+  --basic-grey: #888888;
+  --basic-middle-light-grey: #A9A9A9;
+  --basic-light-grey: #CACACA;
+  --basic-extra-light-grey: #F2F2F2;
+  --basic-extra-light-grey-shade: #EBEBEB;
+  --basic-black: #000000;
+  --basic-light-black: #333333;
+  --basic-blue: #81B3D2;
+  --basic-dark-blue: #669EC0;
+  --basic-extra-dark-blue: #5496BD;
+  --basic-orange: #766357;
+  --basic-middle-dark-orange: #604E43;
+  --basic-middle-dark-orange-shade: #503E33;
+  --basic-middle-purple-pink: #BDBBBC;
+  --basic-dark-pink-red: #231F20;
+
+
+
+
+
+
+
+
+
+
+
+}
