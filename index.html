@@ -32,13 +32,15 @@
           заслуживающий большего!</p>
         <p class="features-info">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         <ul class="features-list">
-          <li class="feature-item-special">
-            <h2>Настоящий<br>
-              городок</h2>
-            <span>№1</span>
-            <p>Седона - не аттракцион для туристов, там<br>
-                течёт своя жизнь</p>
-            <img src="img/real_city.jpg" width="800" height="256" alt="Вид на горы со стороны городка Седона">
+          <li>
+            <div class="feature-item-special">
+              <h2>Настоящий<br>
+                городок</h2>
+              <span>- №1 -</span>
+              <p>Седона - не аттракцион для туристов, там<br>
+                  течёт своя жизнь</p>
+              <img src="img/real_city.jpg" width="800" height="256" alt="Вид на горы со стороны городка Седона">
+            </div>
             <ul class="benefits-list">
               <li class="benefit-item">
                 <h3>Жильё</h3>
@@ -60,32 +62,34 @@
           <li class="feature-item-special">
             <h2>Там есть<br>
                 мост дьявола</h2>
-            <span>№2</span>
+            <span>- №2 -</span>
             <p>Да, по нему можно пройти! Если конечно<br>
               вы осмелитесь</p>
             <img src="img/devil's_bridge.jpg" width="800" height="256" alt="Вид на Мост Дьявола">
           </li>
-          <li class="feature-item">
-            <h2>Небольшая<br>
-              площадь</h2>
-            <span>№3</span>
-            <p>Все достопримечательности<br>
-              находятся очень близко</p>
-          </li>
-          <li class="feature-item">
-            <h2>Красивая<br>
-              дорога</h2>
-            <span>№4</span>
-            <p>Ехать в седону из лас-вегаса совсем<br>
-              не скучно!</p>
-          </li>
-          <li class="feature-item">
-            <h2>Мало<br>
-              туристов</h2>
-            <span>№5</span>
-            <p>Большинство едет в гранд каньон<br>
-              и толпится там</p>
-          </li>
+          <div class="feature-item-block">
+            <li class="feature-item">
+              <h2>Небольшая<br>
+                площадь</h2>
+              <span>- №3 -</span>
+              <p>Все достопримечательности<br>
+                находятся очень близко</p>
+            </li>
+            <li class="feature-item">
+              <h2>Красивая<br>
+                дорога</h2>
+              <span>- №4 -</span>
+              <p>Ехать в седону из лас-вегаса совсем<br>
+                не скучно!</p>
+            </li>
+            <li class="feature-item">
+              <h2>Мало<br>
+                туристов</h2>
+              <span>- №5 -</span>
+              <p>Большинство едет в гранд каньон<br>
+                и толпится там</p>
+            </li>
+          </div>
         </ul>
       </section>
       <section class="search">
@@ -93,7 +97,7 @@
         <p class="search-subtitle">Заинтересовались?</p>
         <p class="search-info">Укажите предполагаемые даты поездки,<br>
            и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <h3>Поиск гостиницы в седоне</h3>
+        <h3><a class="search-hotel" href="#">Поиск гостиницы в седоне</a></h3> <!--Михаил, сомневаюсь, что это. Кнопка или ссылка. Пока оформил как кнопку-->
         <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
           <div class="search-item">
             <label for="date-from-field">Дата заезда:</label>
