@@ -196,15 +196,13 @@ img {
   font-weight: 700;
 }
 
-.filters-button { /*Михаил, правильно ли я указал стили для кнопки? Когда в дальнейшем мы ее передвинем на фон, все будет видно, так?*/
+.filters-button {
   background-color: var(--basic-white);
-  opacity: 0;
-  border: 2px solid #FFFFFF;
+  border: 2px solid var(--basic-white);
   border-radius: 2px;
 }
 
 .filters .filters-button:hover {
-  opacity: 1;
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
@@ -382,6 +380,6 @@ img {
   background-color: var(--basic-dark-blue);
 }
 
-.hotels-list-link:focus { /*Михаил, прозрачность текста на фоне будет разбираться дальше в курсе?*/
+.hotels-list-link:focus {
   background-color: var(--basic-extra-dark-blue);
 }
