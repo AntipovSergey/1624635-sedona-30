@@ -22,7 +22,9 @@
   --basic-white: #FFFFFF;
   --basic-dark-white: #EEEEEE;
   --basic-grey: #888888;
+  --basic-grey-shade: #6A6A6A;
   --basic-middle-light-grey: #A9A9A9;
+  --basic-middle-light-grey-shade: #666666;
   --basic-light-grey: #CACACA;
   --basic-extra-light-grey: #F2F2F2;
   --basic-extra-light-grey-shade: #EBEBEB;
@@ -65,20 +67,23 @@ img {
 .site-navigation,
 .features-list,
 .benefits-list,
-.socials-list {
+.socials-list,
+.sort-list,
+.hotels-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
-
-
 
 /*Main navigation*/
 
 .main-navigation {
   font-weight: bold;
   line-height: 26px;;
+}
+
+.site-navigation-current a:not([href]){
+  color: var(--basic-orange);
 }
 
 /*User navigation*/
@@ -94,10 +99,6 @@ img {
 .site-navigation a:focus {
   color: var(--basic-black);
   opacity: 0.3;
-}
-
-.site-navigation a:active {
-  color: var(--basic-orange);
 }
 
 /*Container*/
@@ -132,7 +133,7 @@ img {
 }
 
 .feature-item-special,
-.feature-item-special h2 {
+.feature-item-special .features-list-subtitle {
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
@@ -170,6 +171,8 @@ img {
   line-height: 26px;
   color: var(--basic-white);
   background-color: var(--basic-orange);
+  text-align: center;
+  vertical-align: middle;
 }
 
 .search-hotel a:hover {
@@ -190,6 +193,48 @@ img {
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
+  font-weight: 700;
+}
+
+.filters-button { /*Михаил, правильно ли я указал стили для кнопки? Когда в дальнейшем мы ее передвинем на фон, все будет видно, так?*/
+  background-color: var(--basic-white);
+  opacity: 0;
+  border: 2px solid #FFFFFF;
+  border-radius: 2px;
+}
+
+.filters .filters-button:hover {
+  opacity: 1;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.hotels-sort .sort-list-button {
+  color: var(--basic-light-grey);
+}
+
+.sort-list-button .active {
+  color: var(--basic-blue);
+}
+
+.hotels-sort .sort-list-button:hover {
+  color: var(--basic-black);
+}
+
+.hotels-sort .sort-list-button:focus {
+  color: var(--basic-blue);
+}
+
+.hotels-list-item .hotels-list-button {
+  background-color: var(--basic-orange);
+}
+
+.hotels-list-item .hotels-list-button:hover {
+  background-color: var(--basic-middle-dark-orange);
+}
+
+.hotels-list-item .hotels-list-button:focus {
+  background-color: var(--basic-middle-dark-orange-shade);
 }
 
 .button:hover {
@@ -244,4 +289,99 @@ img {
 
 .social-button:focus {
   color: var(--basic-extra-dark-blue);
+}
+
+/*Filters*/
+
+.filters {
+  background-image: url("../img/background_catalog.jpg");
+  background-repeat: no-repeat;
+  color: var(--basic-white);
+}
+
+.filter-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.filter-input:focus {
+  color: var(--basic-grey-shade);
+}
+
+/*Hotels sort*/
+
+.hotels-sort {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.hotels-sort-list-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.sort-list-item a {
+  color: var(--basic-black);
+  opacity: 0.3;
+  border-bottom: 1px dotted var(--basic-blue);
+}
+
+.current a:not([href]) {
+  color: var(--basic-blue);
+  opacity: 1;
+  border-bottom: none;
+}
+
+.sort-list-item a:hover {
+  color: var(--basic-blue);
+}
+
+.sort-list-item a:focus {
+  color: var(--basic-black);
+  opacity: 1;
+  border-bottom: none;
+}
+
+/*Hotels list*/
+
+.hotels-list {
+  color: var(--basic-light-black)
+}
+
+.hotels-list-title a {
+  color: var(--basic-black);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.hotels-list-title a:hover {
+  color: var(--basic-blue);
+}
+
+.hotels-list-title a:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.hotels-list-rating {
+  color: var(--basic-middle-light-grey-shade);
+  background-color: var(--basic-extra-light-grey);
+}
+
+.hotels-list-link {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hotels-list-link:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.hotels-list-link:focus { /*Михаил, прозрачность текста на фоне будет разбираться дальше в курсе?*/
+  background-color: var(--basic-extra-dark-blue);
 }
