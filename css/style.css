@@ -52,6 +52,11 @@ body {
   text-transform: uppercase;
   color: var(--basic-black);
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -75,9 +80,17 @@ img {
   padding: 0;
 }
 
+/*Grid*/
+
+.page {
+  height: 100%;
+}
+
 /*Main navigation*/
 
-.main-navigation {
+.main-navigation { /*Михаил, не уверен, стоит ли делать шапку гридом, или обернуть ее позже во флекс, который мне кажется тут более актуальным. Пока оставлю одноколоночный грид.*/
+  display: grid;
+  grid-template-columns: 1fr;
   font-weight: bold;
   line-height: 26px;;
 }
@@ -103,6 +116,11 @@ img {
 
 /*Container*/
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .visually-hidden {
   visibility: hidden;
 }
@@ -110,6 +128,8 @@ img {
 /*Features*/
 
 .features {
+  margin-top: 41.5 px;
+  margin-bottom: 58px;
   text-align: center;
   color: var(--basic-light-black);
 }
@@ -132,20 +152,59 @@ img {
   line-height: 26px;
 }
 
-.feature-item-special,
-.feature-item-special .features-list-subtitle {
+.feature-item-special-1,
+.feature-item-special-2,
+.feature-item-special-1 .features-list-subtitle,
+.feature-item-special-2 .features-list-subtitle {
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
 
 .features-list {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: 256px 330px 256px 256px;
   background-color: var(--basic-dark-white);
 }
 
+.feature-item-special-1 {
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 400px 800px;
+}
+
+
+.benefits {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.feature-item-special-2 {
+  grid-row: 3/4;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 800px 400px;
+}
+
+.feature-item-special-2 .img {
+  order: -1;
+}
+
+/*Михаил, не стал оборачивать feature-item в список с дальнейшим добавлением грида, так как эти <li> feature-item итак правильно выстроились в раскладке грида общего списка features-list. Это правильно?*/
+
 /*Search*/
+
+/*Михаил, я тут подумал, нужно ли оборачивать секцию search в грид для того, чтобы карту поместить на задний фон с помощью z-index. Или же грид здесь не нужен?*/
 
 .search {
   text-align: center;
+  display: grid;
 }
 
 .search-subtitle {
@@ -181,6 +240,10 @@ img {
 
 .search-hotel a:focus {
   background-color: var(--basic-middle-dark-orange-shade);
+}
+
+.map {
+  z-index: -1;
 }
 
 /*Button*/
@@ -246,15 +309,25 @@ img {
 /*Main footer*/
 
 .main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: var(--basic-white);
   opacity: 0.9;
   text-align: center;
 }
 
 .footer-contacts {
+  margin-left: 111px;
+  width: 251px;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+}
+
+.footer-socials {
+  width: 150px;
+  justify-self: center;
+  text-align: center;
 }
 
 .footer-phone {
@@ -264,6 +337,9 @@ img {
 
 .footer-copyright {
   line-height: 26px;
+  max-width: 197px;
+  margin-right: 138px;
+  justify-self: end;
 }
 
 .footer-logo:hover {

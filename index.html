@@ -12,7 +12,7 @@
   </head>
   <body class="page-body">
     <header class="main-header">
-      <nav class="main-navigation">
+      <nav class="main-navigation container">
         <ul class="site-navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
@@ -32,15 +32,19 @@
           заслуживающий большего!</p>
         <p class="features-info">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         <ul class="features-list">
-          <li>
-            <div class="feature-item-special">
+          <li class="feature-item-special-1">
+            <div class="feature-item-content">
               <h2 class="features-list-subtitle">Настоящий<br>
                 городок</h2>
               <span>- №1 -</span>
               <p>Седона - не аттракцион для туристов, там<br>
                   течёт своя жизнь</p>
+            </div>
+            <div class="img">
               <img src="img/real_city.jpg" width="800" height="256" alt="Вид на горы со стороны городка Седона">
             </div>
+          </li>
+          <li class="benefits">
             <ul class="benefits-list">
               <li class="benefit-item">
                 <h3 class="benefits-list-subtitle">Жильё</h3>
@@ -59,13 +63,17 @@
               </li>
             </ul>
           </li>
-          <li class="feature-item-special">
-            <h2 class="features-list-subtitle">Там есть<br>
-                мост дьявола</h2>
-            <span>- №2 -</span>
-            <p>Да, по нему можно пройти! Если конечно<br>
-              вы осмелитесь</p>
-            <img src="img/devil's_bridge.jpg" width="800" height="256" alt="Вид на Мост Дьявола">
+          <li class="feature-item-special-2">
+            <div class="feature-item-content">
+              <h2 class="features-list-subtitle">Там есть<br>
+                  мост дьявола</h2>
+              <span>- №2 -</span>
+              <p>Да, по нему можно пройти! Если конечно<br>
+                вы осмелитесь</p>
+            </div>
+            <div class="img">
+              <img src="img/devil's_bridge.jpg" width="800" height="256" alt="Вид на Мост Дьявола">
+            </div>
           </li>
           <li class="feature-item">
             <h2 class="features-list-subtitle">Небольшая<br>
@@ -115,10 +123,12 @@
           </div>
           <button class="button" type="submit">Найти</button>
         </form>
-        <img src="img/map.png" width="1199" height="594" alt="Карта Седоны">
+        <div class="map">
+          <img src="img/map.png" width="1199" height="594" alt="Карта Седоны">
+        </div>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <div class="footer-contacts">
         <p class="footer-hashtag">#VISITSEDONA</p>
         <p>
@@ -128,7 +138,7 @@
       <div class="footer-socials">
         <ul class="socials-list">
           <li>
-            <a class="social-button" href="#">Twitter</a>
+            <a class="social-button twitter" href="#">Twitter</a>
           </li>
           <li>
             <a class="social-button" href="#">Facebook</a>
