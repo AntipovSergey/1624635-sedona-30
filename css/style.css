@@ -330,6 +330,12 @@ img {
   text-align: center;
 }
 
+.twitter,
+.facebook,
+.youtube {
+  background-color: var(--basic-blue);
+}
+
 .footer-phone {
   text-decoration: none;
   color: var(--basic-black);
