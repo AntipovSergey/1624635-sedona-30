@@ -5,22 +5,22 @@
       <title>HTML Academy:Каталог-Седона</title>
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/style.css">
-  	</head>
-  	<body class="page-body">
-    	<header class="main-header">
-      		<nav class="main-navigation">
-        		<ul class="site-navigation">
-          			<li><a href="#">Информация</a></li>
-          			<li><a href="#">Фото и видео</a></li>
-          			<li><a href="#">Карта штата</a></li>
-          			<li class="site-navigation-current"><a>Гостиницы</a></li>
-        		</ul>
-        		<a href="index.html">
-          		<img src="img/logo.svg" width="138" height="70" alt="Логотип города Седона">
-        		</a>
-      		</nav>
+  </head>
+  <body class="page-body catalog">
+    <header class="main-header">
+      	<nav class="main-navigation container">
+        	<ul class="site-navigation">
+        			<li><a href="#">Информация</a></li>
+        			<li><a href="#">Фото и видео</a></li>
+        			<li><a href="#">Карта штата</a></li>
+          		<li class="site-navigation-current"><a>Гостиницы</a></li>
+        	</ul>
+        	<a href="index.html">
+        		<img src="img/logo.svg" width="138" height="70" alt="Логотип города Седона">
+        	</a>
+      	</nav>
 		</header>
-		<main class="page-catalog-container">
+		<main class="page-catalog container">
 			<h1 class="visually-hidden">Страница выбора и бронирования номера в гостинице</h1>
 	  		<section class="filters">
 				<h2 class="visually-hidden">Фильтр гостиниц</h2>
@@ -66,7 +66,7 @@
 				<button class="sort-list-button" type="button" disabled>Вверх</button>
 				<button class="sort-list-button active" type="button">Вниз</button>
       </section>
-			<section class="hotels-list">
+			<section class="hotels">
 				<h2 class="visually-hidden">Список гостиниц</h2>
 				<ul class="hotels-list">
 					<li class="hotels-list-item">
@@ -114,7 +114,7 @@
 				</ul>
 			</section>
 		</main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <div class="footer-contacts">
         <p class="footer-hashtag">#VISITSEDONA</p>
         <p>

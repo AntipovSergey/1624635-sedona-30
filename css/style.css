@@ -88,7 +88,7 @@ img {
 
 /*Main navigation*/
 
-.main-navigation { /*Михаил, не уверен, стоит ли делать шапку гридом, или обернуть ее позже во флекс, который мне кажется тут более актуальным. Пока оставлю одноколоночный грид.*/
+.main-navigation {
   display: grid;
   grid-template-columns: 1fr;
   font-weight: bold;
@@ -199,12 +199,6 @@ img {
 .feature-item-special-2 .img {
   order: -1;
 }
-
-/*Михаил, не стал оборачивать feature-item в список с дальнейшим добавлением грида, так как эти <li> feature-item итак правильно выстроились в раскладке грида общего списка features-list. Это правильно?*/
-
-/*Search*/
-
-/*Михаил, я тут подумал, нужно ли оборачивать секцию search в грид для того, чтобы карту поместить на задний фон с помощью z-index. Или же грид здесь не нужен?*/
 
 .search {
   text-align: center;
@@ -375,6 +369,12 @@ img {
   color: var(--basic-extra-dark-blue);
 }
 
+/*Page catalog*/
+
+.page-catalog {
+  display:grid;
+  grid-template-rows:217px 86px 1fr;
+}
 
 /*Filters*/
 
@@ -382,6 +382,11 @@ img {
   background-image: url("../img/background_catalog.jpg");
   background-repeat: no-repeat;
   color: var(--basic-white);
+}
+
+.filter {
+  padding-left: 73px;
+  padding-right: 73px;
 }
 
 .filter-title {
@@ -396,6 +401,8 @@ img {
 /*Hotels sort*/
 
 .hotels-sort {
+  padding-left: 73px;
+  padding-right: 73px;
   font-size: 12px;
   line-height: 18px;
 }
@@ -430,8 +437,13 @@ img {
 
 /*Hotels list*/
 
-.hotels-list {
+.hotels {
   color: var(--basic-light-black)
+}
+
+.hotels-list {
+  padding-left: 73px;
+  padding-right: 73px;
 }
 
 .hotels-list-title a {
