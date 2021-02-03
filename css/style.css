@@ -452,8 +452,6 @@ img {
   display: grid;
   grid-template-columns: 135px 1fr 1fr;
   column-gap: 29px;
-  outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px;
 }
 
 .hotels-list-item-img {
