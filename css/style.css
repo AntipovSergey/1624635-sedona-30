@@ -52,7 +52,6 @@ body {
   text-transform: uppercase;
   color: var(--basic-black);
   background-color: var(--basic-white);
-
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -74,10 +73,19 @@ img {
 .benefits-list,
 .socials-list,
 .sort-list,
-.hotels-list {
+.hotels-list,
+.greetings-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /*Grid*/
@@ -86,19 +94,44 @@ img {
   height: 100%;
 }
 
+/*Container*/
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /*Main navigation*/
 
+/*
 .main-navigation {
   display: grid;
   grid-template-columns: 1fr;
   font-weight: bold;
-  line-height: 26px;;
+  line-height: 26px;
+}
+*/
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+/*Site navigation*/
+
+.site-navigation {
+  display:flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 15px 72px;
 }
 
 .site-navigation-current a:not([href]){
   color: var(--basic-orange);
 }
-
+*/
 /*User navigation*/
 
 .site-navigation a {
@@ -114,19 +147,29 @@ img {
   opacity: 0.3;
 }
 
-/*Container*/
+/*Greetings*/
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
+.greetings-list {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  width: 457px;
 }
 
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+.greetings-list .first {
+  margin-top: 77px;
+  margin-bottom: 14px;
+}
+
+.greetings-list .second {
+  margin-top: 0px;
+  margin-bottom: 54px;
+}
+
+.greetings-list .third {
+  margin-top: 0px;
+  margin-bottom: 81px;
 }
 
 /*Features*/
@@ -178,17 +221,6 @@ img {
   grid-template-columns: 400px 800px;
 }
 
-
-.benefits {
-  grid-row: 2/3;
-  grid-column: 1/-1;
-}
-
-.benefits-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .feature-item-special-2 {
   grid-row: 3/4;
   grid-column: 1/-1;
@@ -200,9 +232,36 @@ img {
   order: -1;
 }
 
+/*Benefits*/
+
+.benefits {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+}
+
+/*
+.benefits-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+*/
+
+.benefits-list {
+  display: flex;
+  align-items: center;
+  height: 330px;
+  background-color: var(--basic-white);
+
+}
+
+.benefit-item {
+  width: 400px;
+}
+
+/*Search*/
+
 .search {
   text-align: center;
-  display: grid;
 }
 
 .search-subtitle {
@@ -231,6 +290,7 @@ img {
   text-align: center;
   vertical-align: middle;
 }
+
 
 .search-hotel a:hover {
   background-color: var(--basic-middle-dark-orange);
@@ -325,7 +385,7 @@ img {
 .footer-socials {
   width: 150px;
   justify-self: center;
-  text-align: center;
+  align-self: center;
 }
 
 .twitter,

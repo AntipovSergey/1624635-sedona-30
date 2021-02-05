@@ -26,6 +26,17 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Седона, штат Аризона</h1>
+      <ul class="greetings-list">
+        <li class="greetings-list-item first">
+          <img src="img/greeting_1.svg" width="188" height="45" alt="">
+        </li>
+        <li class="greetings-list-item second">
+          <img src="img/greeting_2.svg" width="256" height="28" alt="">
+        </li>
+        <li class="greetings-list-item third">
+          <img src="img/greeting_3.svg" width="457" height="213" alt="">
+        </li>
+      </ul>
       <img src="https://via.placeholder.com" width="1200" height="509" alt="Приветственные слова на фоне Гранд Каньона">
       <section class="features">
         <p class="features-subtitle">Седона — небольшой городок в Аризоне,<br>
@@ -105,23 +116,26 @@
            и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
           <p class="search-hotel"><a href="#">Поиск гостиницы в седоне</a></p>
-          <div class="search-item">
-            <label for="date-from-field">Дата заезда:</label>
-            <input type="date" name="date-from" id="date-from-field" value="2017-05-24">
+          <div class="search-items">
+            <div class="arrival-search-item">
+              <label for="date-from-field">Дата заезда:</label>
+              <input type="date" name="date-from" id="date-from-field" value="2017-05-24">
+            </div>
+            <div class="departure-search-item">
+              <label for="date-to-field">Дата выезда:</label>
+              <input type="date" name="date-to" id="date-to-field" value="2017-07-04">
+            </div>
+            <div class="adults-search-item">
+              <label for="adults-field">Взрослые:</label>
+              <input type="number" name="adults" id="adults-field" value="2" min="0" max="4" step="1">
+            </div>
+            <div class="children-search-item">
+              <label for="children-field">Дети:</label>
+              <input type="number" name="children" id="children-field" value="0" min="0" max="4" step="1">
+            <div class="submit-search-item">
+              <button class="button" type="submit">Найти</button>
+            </div>
           </div>
-          <div class="search-item">
-            <label for="date-to-field">Дата выезда:</label>
-            <input type="date" name="date-to" id="date-to-field" value="2017-07-04">
-          </div>
-          <div class="search-item">
-            <label for="adults-field">Взрослые:</label>
-            <input type="number" name="adults" id="adults-field" value="2" min="0" max="4" step="1">
-          </div>
-          <div class="search-item">
-            <label for="children-field">Дети:</label>
-            <input type="number" name="children" id="children-field" value="0" min="0" max="4" step="1">
-          </div>
-          <button class="button" type="submit">Найти</button>
         </form>
         <div class="map">
           <img src="img/map.png" width="1199" height="594" alt="Карта Седоны">
