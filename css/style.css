@@ -131,7 +131,7 @@ img {
 .site-navigation-current a:not([href]){
   color: var(--basic-orange);
 }
-*/
+
 /*User navigation*/
 
 .site-navigation a {
@@ -228,7 +228,7 @@ img {
   grid-template-columns: 800px 400px;
 }
 
-.feature-item-special-2 .img {
+.feature-item-special-2 .picture {
   order: -1;
 }
 
