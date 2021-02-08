@@ -461,8 +461,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline-offset: -5px;
-  outline: 5px solid rgba(255, 0, 255, 0.7);
 }
 
 fieldset {
@@ -476,7 +474,6 @@ fieldset {
 fieldset:first-child {
   margin-right: 119px;
 }
-
 
 .checkboxes-list li {
   margin-bottom: 23px;
@@ -511,6 +508,10 @@ fieldset:first-child {
   align-items: center;
 }
 
+.sort-list {
+  display: flex;
+}
+
 .hotels-sort-list-title {
   font-weight: 700;
   font-size: 21px;
@@ -524,6 +525,14 @@ fieldset:first-child {
 
 .sort-list-buttons {
   margin-left: auto;
+}
+
+.sort-list-item {
+ padding-right: 33px;
+}
+
+.sort-list-item:last-child {
+  padding-right: 0;
 }
 
 .sort-list-item a {
