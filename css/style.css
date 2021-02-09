@@ -63,11 +63,6 @@ a {
   text-decoration: none;
 }
 
-.footer-hashtag {
-  margin: 0;
-  padding: 0;
-}
-
 .visually-hidden,
 .hotels-list-title,
 .features-list-subtitle,
@@ -652,4 +647,9 @@ fieldset:first-child {
 
 .hotels-list-link:focus {
   background-color: var(--basic-extra-dark-blue);
+}
+
+.footer-hashtag {
+  margin: 0;
+  padding: 0;
 }
