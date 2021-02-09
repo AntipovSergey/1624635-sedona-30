@@ -63,11 +63,15 @@ a {
   text-decoration: none;
 }
 
+.footer-hashtag {
+  margin: 0;
+  padding: 0;
+}
+
 .visually-hidden,
 .hotels-list-title,
 .features-list-subtitle,
 .benefits-list-subtitle {
-  list-style-type: none;
   margin: 0;
   padding: 0;
 }
