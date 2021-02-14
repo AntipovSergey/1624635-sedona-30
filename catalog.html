@@ -32,15 +32,15 @@
             <legend class="filter-title">Инфраструктура:</legend>
             <ul class="checkboxes-list">
               <li>
-                <input class="filter-input" type="checkbox" name="pool" id="pool-field" checked>
+                <input class="visually-hidden filter-input" type="checkbox" name="pool" id="pool-field" checked>
                 <label for="pool-field">Бассейн</label>
               </li>
               <li>
-                <input class="filter-input" type="checkbox" name="parking" id="parking-field">
+                <input class="visually-hidden filter-input" type="checkbox" name="parking" id="parking-field">
                 <label for="parking-field">Парковка</label>
               </li>
               <li>
-                <input class="filter-input" type="checkbox" name="wi-fi" id="wi-fi-field">
+                <input class="visually-hidden filter-input" type="checkbox" name="wi-fi" id="wi-fi-field">
                 <label for="wi-fi-field">Wi-Fi</label>
               </li>
             </ul>
@@ -49,21 +49,43 @@
             <legend class="filter-title">Тип жилья:</legend>
             <ul class="checkboxes-list">
               <li>
-                <input class="filter-input" type="checkbox" name="hotel" id="hotel-field" checked>
+                <input class="visually-hidden filter-input" type="checkbox" name="hotel" id="hotel-field" checked>
                 <label for="hotel-field">Гостиница</label>
               </li>
               <li>
-                <input class="filter-input" type="checkbox" name="motel" id="motel-field" checked>
+                <input class="visually-hidden filter-input" type="checkbox" name="motel" id="motel-field" checked>
                 <label for="motel-field">Мотель</label>
               </li>
               <li>
-                <input class="filter-input" type="checkbox" name="appartments" id="appartments-field" checked>
+                <input class="visually-hidden filter-input" type="checkbox" name="appartments" id="appartments-field" checked>
                 <label for="appartments-field">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
         </div>
         <div class="price-filter">
+          <fieldset class="filter-item">
+            <legend>Стоимость в сутки (Р)</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="3000">
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!--<div class="price-filter">
           <fieldset>
             <legend class="filter-title">Стоимость в сутки (Р):</legend>
             <label for="price-from-field">От</label>
@@ -73,7 +95,7 @@
             <input type="range" min="0" max="4000" step="100" value="3000">
           </fieldset>
           <button class="button filters-button" type="submit">Показать</button>
-        </div>
+        </div>-->
       </form>
     </section>
     <section class="hotels-sort">

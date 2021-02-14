@@ -390,6 +390,12 @@ img {
   text-align: center;
 }
 
+.map {
+  z-index: -1;
+  height: 594px;
+  margin-top: 110px;
+}
+
 .search-subtitle {
   font-weight: 700;
   font-size: 30px;
@@ -411,6 +417,8 @@ img {
 }
 
 .search-form {
+  position: absolute;
+  left: 26%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -632,13 +640,6 @@ img {
   padding: 0;
 }
 
-.map {
-  position: absolute;
-  top: 233px;
-  z-index: -1;
-  height: 594px;
-}
-
 /*Button*/
 
 .button {
@@ -828,16 +829,44 @@ img {
   color: var(--basic-white);
 }
 
+/*checkboxes*/
+
+.checkboxes label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 29px;
+  padding-left: 13px;
+}
+
+.checkboxes label::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 23px;
+  height: 23px;
+  top: -2px;
+  left: -30px;
+}
+
+.checkboxes .filter-input:checked + label::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 27px;
+  height: 23px;
+  top: -2px;
+  left: -30px;
+}
+
 .checkboxes {
   justify-self: start;
   display: flex;
-}
-
-.price-filter {
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 fieldset {
@@ -866,18 +895,43 @@ fieldset:first-child {
   font-size: 16px;
 }
 
+/*price-filter*/
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 317px;
+  margin-top: 10px;
+}
+
+/*
+.price-filter {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .price-filter .filter-title {
   margin-bottom: 11px;
 }
+*/
 
-.filter-input:focus {
-  color: var(--basic-grey-shade);
+/*filters buttons' behaviour*/
+
+.filter-input:disabled path {
+  fill: var(--basic-grey-shade);
 }
 
 /*Hotels sort*/
 
 .hotels-sort {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 73px;
   padding-right: 73px;
   font-size: 12px;
@@ -888,6 +942,7 @@ fieldset:first-child {
 
 .sort-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .hotels-sort-list-title {
