@@ -90,17 +90,6 @@
             <button class="button filters-button" type="submit">Показать</button>
           </fieldset>
         </div>
-        <!--<div class="price-filter">
-          <fieldset>
-            <legend class="filter-title">Стоимость в сутки (Р):</legend>
-            <label for="price-from-field">От</label>
-            <input type="text" name="price-from" id="price-from-field" value="0">
-            <label for="price-to-field">До</label>
-            <input type="text" name="price-to" id="price-to-field" value="3000">
-            <input type="range" min="0" max="4000" step="100" value="3000">
-          </fieldset>
-          <button class="button filters-button" type="submit">Показать</button>
-        </div>-->
       </form>
     </section>
     <section class="hotels-sort">
@@ -113,8 +102,12 @@
         <li class="sort-list-item"><a href="#">По рейтингу</a></li>
       </ul>
       <div class="sort-list-buttons">
-        <button class="sort-list-button" type="button" disabled>Вверх</button>
-        <button class="sort-list-button active" type="button">Вниз</button>
+        <button class="sort-list-button sort-list-button-up" type="button" disabled>
+          <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA"/></svg>
+        </button>
+        <button class="sort-list-button sort-list-button-down" type="button">
+          <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA"/></svg>
+        </button>
       </div>
     </section>
     <section class="hotels">
@@ -127,17 +120,25 @@
             </div>
             <div class="hotels-list-item-description">
               <h3 class="hotels-list-title"><a href="#">Amara Resort & Spa</a></h3>
-              <p>Гостиница</p>
-              <p>От 4000 Р.</p>
-              <a class="hotels-list-link" href="#">Подробнее</a>
-              <button class="button hotels-list-button" type="submit">Забронировать</button>
+              <div class="hotel-price">
+                <span>Гостиница</span>
+                <span>От 4000 Р.</span>
+              </div>
+              <div class="hotel-book">
+                <a class="hotels-list-link" href="#">Подробнее</a>
+                <button class="button hotels-list-button" type="submit">Забронировать</button>
+              </div>
             </div>
             <div class="hotels-list-item-rating">
-              <img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
-              <img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
-              <img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
-              <img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
-              <p class="hotels-list-rating">Рейтинг: 8,5</p>
+              <div class="stars-raiting">
+                <img src="img/star.svg" width="19" height="17" alt="Звезда рейтинга">
+                <img src="img/star.svg" width="19" height="17" alt="Звезда рейтинга">
+                <img src="img/star.svg" width="19" height="17" alt="Звезда рейтинга">
+                <img src="img/star.svg" width="19" height="17" alt="Звезда рейтинга">
+              </div>
+              <div class="text-raiting">
+                <span class="hotels-list-rating">Рейтинг: 8,5</span>
+              </div>
             </div>
           </article>
         </li>
@@ -148,16 +149,24 @@
             </div>
             <div class="hotels-list-item-description">
               <h3 class="hotels-list-title"><a href="#">Desert Quail Inn</a></h3>
-              <p>Мотель</p>
-              <p>От 3000 Р.</p>
-              <a class="hotels-list-link" href="#">Подробнее</a>
-              <button class="button hotels-list-button" type="submit">Забронировать</button>
+              <div class="hotel-price">
+                <span>Мотель</span>
+                <span>От 3000 Р.</span>
+              </div>
+              <div class="hotel-book">
+                <a class="hotels-list-link" href="#">Подробнее</a>
+                <button class="button hotels-list-button" type="submit">Забронировать</button>
+              </div>
             </div>
             <div class="hotels-list-item-rating">
-              <img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
-              <img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
-              <img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
-              <p class="hotels-list-rating">Рейтинг: 8,9</p>
+              <div class="stars-raiting">
+                <img src="img/star.svg" width="19" height="17" alt="Звезда рейтинга">
+                <img src="img/star.svg" width="19" height="17" alt="Звезда рейтинга">
+                <img src="img/star.svg" width="19" height="17" alt="Звезда рейтинга">
+              </div>
+              <div class="text-raiting">
+                <p class="hotels-list-rating">Рейтинг: 8,9</p>
+              </div>
             </div>
           </article>
         </li>
@@ -169,15 +178,23 @@
             </div>
             <div class="hotels-list-item-description">
               <h3 class="hotels-list-title"><a href="#">Villas at Poco Diablo</a></h3>
-              <p class="hotels-list-paragraph-1">Апартаменты</p>
-              <p class="hotels-list-paragraph-2">От 2000 Р.</p>
-              <a class="hotels-list-link" href="#">Подробнее</a>
-              <button class="button hotels-list-button" type="submit">Забронировать</button>
+              <div class="hotel-price">
+                <span>Апартаменты</span>
+                <span>От 2000 Р.</span>
+              </div>
+              <div class="hotel-book">
+                <a class="hotels-list-link" href="#">Подробнее</a>
+                <button class="button hotels-list-button" type="submit">Забронировать</button>
+              </div>
             </div>
             <div class="hotels-list-item-rating">
-              <img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
-              <img src="https://via.placeholder.com" width="19" height="17" alt="Звезда рейтинга">
-              <p class="hotels-list-rating">Рейтинг: 9,2</p>
+              <div class="stars-raiting">
+                <img src="img/star.svg" width="19" height="17" alt="Звезда рейтинга">
+                <img src="img/star.svg" width="19" height="17" alt="Звезда рейтинга">
+              </div>
+              <div class="text-raiting">
+                <p class="hotels-list-rating">Рейтинг: 9,2</p>
+              </div>
             </div>
           </article>
         </li>

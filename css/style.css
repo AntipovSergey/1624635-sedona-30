@@ -998,19 +998,6 @@ fieldset:first-child {
   margin-bottom: 32px;
 }
 
-/*
-.price-filter {
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.price-filter .filter-title {
-  margin-bottom: 11px;
-}
-*/
-
 /*filters buttons' behaviour*/
 
 .filter-input:disabled path {
@@ -1080,6 +1067,28 @@ fieldset:first-child {
   border-bottom: none;
 }
 
+.sort-list-button {
+  border: none;
+  background-color: transparent;
+}
+
+.sort-list-button:last-of-type {
+  transform: rotate(180deg) translateY(2px);
+
+}
+
+.sort-list-button:hover path {
+  fill: var(--basic-black);
+}
+
+.sort-list-button:focus path {
+  fill: var(--basic-blue);
+}
+
+.sort-list-button:not(:disabled) path {
+  fill: var(--basic-blue);
+}
+
 /*Hotels list*/
 
 .hotels {
@@ -1119,12 +1128,15 @@ fieldset:first-child {
 }
 
 .hotels-list-item-description {
-  align-self: center;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.hotels-list-item-rating {
-  align-self: center;
-  justify-self: end;
+.hotels-list-title {
+  display: block;
+  margin-top: 21px;
+  margin-bottom: 7px;
 }
 
 .hotels-list-title a {
@@ -1141,6 +1153,57 @@ fieldset:first-child {
 .hotels-list-title a:focus {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+
+.hotel-price {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.hotel-price span:first-of-type {
+  align-items: flex-start;
+  margin-right: 38px;
+}
+
+.hotel-book {
+  display: flex;
+}
+
+.hotels-list-link {
+  display: block;
+  box-sizing: border-box;
+  width: 110px;
+  height: 27px;
+  background-color: var(--basic-blue);
+  padding: 3px 16px 3px 17px;
+  margin-right: 6px;
+}
+
+.hotels-list-item-rating {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+}
+
+.stars-raiting {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.stars-raiting img {
+  margin-left: 4px;
+}
+
+.hotels-list-rating {
+  display: block;
+  box-sizing: border-box;
+  width: 110px;
+  height: 27px;
+  background-color: var(--basic-extra-light-grey);
+  padding: 3px 12px 3px 15px;
+  margin-top: 48px;
 }
 
 .hotels-list-rating {
@@ -1164,6 +1227,4 @@ fieldset:first-child {
   background-color: var(--basic-extra-dark-blue);
 }
 
-.footer-hashtag {
-  padding: 0;
-}
+
