@@ -271,7 +271,7 @@ img {
 .features-list {
   display: grid;
   grid-template-columns: repeat(3, 400px);
-  grid-template-rows: 256px 330px 256px 256px;
+  grid-template-rows: 256px auto 256px 256px;
   background-color: var(--basic-dark-white);
 }
 
@@ -301,7 +301,8 @@ img {
 
 .features-list-text {
   display: block;
-  margin-bottom: 54px;
+  margin-top: 0;
+  margin-bottom: 56px;
 }
 
 .feature-item-special-2 .picture {
@@ -929,8 +930,7 @@ fieldset:first-child {
 .range-controls .scale {
   width: 316px;
   height: 2px;
-  background: var(--basic-white);
-  opacity: 0.3;
+  background: rgb(100%, 100%, 100%, 0.3);
 }
 
 .range-controls .bar {
@@ -939,6 +939,7 @@ fieldset:first-child {
   margin-right: 54px;
   height: 2px;
   background: var(--basic-white);
+
 }
 
 .range-controls .toggle {
