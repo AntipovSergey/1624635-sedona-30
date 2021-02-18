@@ -329,7 +329,6 @@ img {
   /*height: 330px;*/
   background-color: var(--basic-white);
   position: relative;
-
 }
 
 .benefit-item {
@@ -389,7 +388,6 @@ img {
 .search {
   position: relative;
   text-align: center;
-
 }
 
 .map {
@@ -1178,6 +1176,10 @@ fieldset:first-child {
   background-color: var(--basic-blue);
   padding: 3px 16px 3px 17px;
   margin-right: 6px;
+}
+
+.hotels-list-button {
+  padding: 3px 17px 3px 16px;
 }
 
 .hotels-list-item-rating {
