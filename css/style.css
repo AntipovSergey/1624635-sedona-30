@@ -117,14 +117,6 @@ img {
 }
 /*Main navigation*/
 
-/*
-.main-navigation {
-  display: grid;
-  grid-template-columns: 1fr;
-  font-weight: bold;
-  line-height: 26px;
-}
-*/
 .main-navigation {
   position: relative;
   display: flex;
@@ -316,13 +308,6 @@ img {
   grid-column: 1/-1;
 }
 
-/*
-.benefits-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-*/
-
 .benefits-list {
   display: flex;
   align-items: center;
@@ -383,7 +368,6 @@ img {
 }
 
 /*Search*/
-
 
 .search {
   position: relative;
