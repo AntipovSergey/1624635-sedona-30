@@ -1130,12 +1130,14 @@ fieldset:first-child {
 .hotels-list-item-description {
   display: flex;
   flex-direction: column;
+  width: 258px;
 }
 
 .hotels-list-title {
   display: block;
   margin-top: 21px;
   margin-bottom: 7px;
+  text-align: start;
 }
 
 .hotels-list-title a {
@@ -1159,9 +1161,9 @@ fieldset:first-child {
   margin-bottom: 15px;
 }
 
-.hotel-price span:first-of-type {
-  align-items: flex-start;
-  margin-right: 38px;
+.hotel-price-item:first-of-type {
+  width: 110px;
+  margin-right: 6px;
 }
 
 .hotel-book {
