@@ -311,7 +311,6 @@ img {
 .benefits-list {
   display: flex;
   align-items: center;
-  /*height: 330px;*/
   background-color: var(--basic-white);
   position: relative;
 }
