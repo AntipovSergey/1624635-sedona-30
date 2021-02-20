@@ -692,6 +692,7 @@ img {
   background-color: var(--basic-white);
   opacity: 0.9;
   text-align: center;
+  height: 120px;
 }
 
 .footer-contacts {
@@ -757,6 +758,7 @@ img {
   justify-self: end;
   align-items: center;
   display: flex;
+  height: 120px;
 }
 
 .footer-copyright p {
