@@ -37,6 +37,9 @@
   --basic-middle-dark-orange-shade: #503e33;
   --basic-middle-purple-pink: #bdbbbc;
   --basic-dark-pink-red: #231f20;
+  --basic-border: #bfbfbf;
+  --basic-search-border: #d9d9d9;
+  --basic-scale-color: #b3b3b3;
 }
 /*Global*/
 
@@ -111,7 +114,7 @@ img {
 .container {
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px var(--basic-border);
 }
 /*Main navigation*/
 
@@ -127,7 +130,7 @@ img {
 .main-header-logo {
   position: absolute;
   left: 528px;
-  z-index: 4;
+  z-index: 5;
 }
 
 /*Site navigation*/
@@ -183,6 +186,7 @@ img {
   position: relative;
   width: 1200px;
   height: 509px;
+  z-index: -1;
 }
 
 .greetings-list {
@@ -403,14 +407,15 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 26px;
   width: 568px;
   margin: 0 auto;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 7px 15px var(--basic-search-border);
   background-color: var(--basic-white);
   margin-bottom: 78px;
 }
+
 
 .search-form-button {
   width: 568px;
@@ -447,8 +452,18 @@ img {
 }
 
 .search-item input {
+  font-weight: 700;
   background-color: var(--basic-extra-light-grey);
   border: none;
+}
+
+.search-item input:hover {
+  background-color: var(--basic-extra-light-grey-shade);
+}
+
+.search-item input:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-large-light-grey-shade);
 }
 
 .search-item:first-of-type input,
@@ -472,16 +487,11 @@ img {
   position: relative;
 }
 
-.search-item:first-of-type label::after {
-  content: "";
+.search-item-calendar {
   position: absolute;
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 21px;
-  height: 23px;
-  top: 6px;
-  left: 94%;
+  left: 430px;
+  z-index: 2;
+  margin-right: 10px;
 }
 
 .search-item:nth-of-type(2) input {
@@ -495,16 +505,12 @@ img {
   position: relative;
 }
 
-.search-item:nth-of-type(2) label::after {
-  content: "";
-  position: absolute;
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 21px;
-  height: 23px;
-  top: 6px;
-  left: 94%;
+.search-item-calendar:hover path {
+  fill: var(--basic-black);
+}
+
+.search-item-calendar:active path {
+  fill: var(--basic-blue);
 }
 
 .search-item:nth-of-type(3) input {
@@ -518,57 +524,44 @@ img {
   position: relative;
 }
 
-.search-item:nth-of-type(3) label::before {
-  content: "";
+.search-item-minus {
   position: absolute;
-  background-image: url("../img/minus.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 21px;
-  height: 23px;
-  top: 18px;
-  left: 54%;
+  z-index: 2;
+  left: 125px;
 }
 
-.search-item:nth-of-type(3) label::after {
-  content: "";
-  position: absolute;
-  background-image: url("../img/plus.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 21px;
-  height: 23px;
-  top: 13px;
-  left: 94%;
+.search-item-plus {
+  position:absolute;
+  z-index: 2;
+  left: 205px;
 }
 
 .children-search-item {
   position: relative;
 }
 
-.search-item:nth-of-type(4) label::before {
-  content: "";
+.children-search-item .search-item-minus {
   position: absolute;
-  background-image: url("../img/minus.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 21px;
-  height: 23px;
-  top: 18px;
-  left: 51%;
+  z-index: 2;
+  left: 122px;
 }
 
-.search-item:nth-of-type(4) label::after {
-  content: "";
-  position: absolute;
-  background-image: url("../img/plus.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 21px;
-  height: 23px;
-  top: 13px;
-  left: 91%;
+.search-item-minus:hover path,
+.search-item-plus:hover path {
+  fill: var(--basic-black);
 }
+
+.search-item-minus:active path,
+.search-item-plus:active path {
+  fill: var(--basic-blue);
+}
+
+.children-search-item .search-item-plus {
+  position:absolute;
+  z-index: 2;
+  left: 202px;
+}
+
 
 .search-item:nth-of-type(4) input {
   text-align: center;
@@ -908,7 +901,7 @@ fieldset:first-child {
 .range-controls .scale {
   width: 316px;
   height: 2px;
-  background: rgba(100%, 100%, 100%, 0.3);
+  background: var(--basic-scale-color);
 }
 
 .range-controls .bar {
@@ -1168,13 +1161,13 @@ fieldset:first-child {
   flex-direction: column;
 }
 
-.stars-raiting {
+.stars-rating {
   display: flex;
   justify-content: flex-end;
   margin-top: 28px;
 }
 
-.stars-raiting img {
+.stars-rating img {
   margin-left: 4px;
 }
 
