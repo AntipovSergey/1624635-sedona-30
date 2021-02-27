@@ -378,7 +378,6 @@ img {
 .map {
   z-index: -1;
   height: 594px;
-  margin-top: 110px;
 }
 
 .search-subtitle {
@@ -416,6 +415,24 @@ img {
   margin-bottom: 78px;
 }
 
+.search-form-hide {
+  display: none;
+}
+
+.search-form-show {
+  display:flex;
+  animation-name: show;
+  animation-duration: 2s;
+}
+
+@keyframes show {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
 
 .search-form-button {
   width: 568px;
@@ -423,6 +440,7 @@ img {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+  margin-right: 8px;
   color: var(--basic-white);
   background-color: var(--basic-orange);
   text-align: center;
